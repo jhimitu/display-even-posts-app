@@ -9,9 +9,8 @@ $.ajax({
   url: "https://jsonplaceholder.typicode.com/posts",
   type: 'GET',
   data: 'json',
-  success: function() {
+  success: function(data) {
     console.log('success');
-    var data = arguments[0];
     data.forEach(function(item) {
       if (item.id % 2 === 0) {
         console.log(item);
